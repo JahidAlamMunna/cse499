@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -7,9 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'HAMDS') }}</title>
-
-    <script src="https://kit.fontawesome.com/813659588a.js"></script>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -35,25 +33,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('medicine.index')}}">Medicines</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('doctor.index')}}">Make Appointment</a>
-                        </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                    
-                        <!-- this will be removed later, added to get easy access to the admin area -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('cart.index') }}" style="font-size: 1rem;"><i class="fas fa-shopping-cart"></i></a>
-                        </li>
-
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -67,20 +51,17 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">                              
-                                    <a class="dropdown-item" href="{{ route('order.past_orders') }}">
-                                       View Past Orders
-                                    </a>   
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>      
+                                    </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
@@ -91,7 +72,7 @@
             </div>
         </nav>
 
-        <main>
+        <main class="py-4">
             @yield('content')
         </main>
     </div>
