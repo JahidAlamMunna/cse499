@@ -40,7 +40,7 @@
                                         <input type="hidden" name="qty" value="1">
                                         <button type="submit" class="btn"><i class="fas fa-shopping-cart"></i></button>
                                     </form>                                    
-                                    <form action="{{route('medicine.show',['id' => $med->med_id])}}" method="GET">
+                                    <form action="{{route('medicine.show', $med->med_id)}}" method="GET">
                                         @csrf
                                         <button type="submit" class="btn">DETAILS</button>
                                     </form>

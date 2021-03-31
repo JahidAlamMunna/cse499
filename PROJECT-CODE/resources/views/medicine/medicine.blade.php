@@ -7,7 +7,7 @@
             <div class="col-md-3 mt-4 card med-img-section pr-3">
                 <div class="card-body">
                     
-                    <img class="" src="{{asset('assets/entacyd.jpg')}}" alt="" width="100%">
+                    <img class="" src="{{asset('assets/').'/'. $medicine->med_name.'.jpg' }}" alt="" width="100%">
                 </div>
 
             </div>
