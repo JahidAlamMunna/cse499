@@ -13,7 +13,12 @@ class PaymentsRecevied extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('payments_received', function (Blueprint $table) {
+     $table->bigIncrements('id');
+     $table->decimal('amount', 8, 2);	            
+     $table->string('transaction_id')->unique();
+     $table->timestamps();
+ });
     }
 
     /**

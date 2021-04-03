@@ -13,10 +13,14 @@ class CreateAppointmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('appointments', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+      Schema::create('appointments', function (Blueprint $table) {
+     $table->bigIncrements('app_id');
+     $table->integer('user_id');
+     $table->integer('doctor_id');
+     $table->date('app_date')->nullable();
+     $table->string('approval')->default('UNAPPROVED');	
+     $table->timestamps();
+       });
     }
 
     /**

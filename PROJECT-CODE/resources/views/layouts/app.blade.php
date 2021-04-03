@@ -74,7 +74,7 @@
                                     <a class="dropdown-item" href="{{ route('order.past_orders') }}">
                                        View Past Orders
                                     </a>   
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="{{ route('home') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}

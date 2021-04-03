@@ -13,7 +13,13 @@ class PaymentsCompleted extends Migration
      */
     public function up()
     {
-        //
+       Schema::create('payments_completed', function (Blueprint $table) {
+    $table->bigIncrements('id');
+    $table->integer('order_id');
+    $table->decimal('amount', 8, 2);	            
+    $table->string('bkash_t_id')->unique();
+    $table->timestamps();
+});
     }
 
     /**

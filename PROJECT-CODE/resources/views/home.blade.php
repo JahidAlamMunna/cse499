@@ -4,7 +4,7 @@
 <div class="home-section">
     <div class="container">
         <div class="homepage-text">
-        <h1 class="text-left display-3">Welcome To HAMDS<h1>
+        <h1 class="text-left display-3">Welcome To Bachao<h1>
         <h5 class="lead text-left">The largest online healthcare website in Bangladesh</h5>
         <div class="text-left mt-4">
             <button class="mr-2"><a class="" href="{{route('medicine.index')}}">Medicines</a></button>
@@ -79,7 +79,7 @@
 </div>
 <div class="footer">
         <div class="text-center">
-        &copyCopyright Hamds 2021
+        &copyCopyright Bachao 2021
         </div>
     </div>
 @endsection
