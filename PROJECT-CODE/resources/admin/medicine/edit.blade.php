@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h4 class="text-center lead">Add a new medicine</h4>
-    <form method="POST" action="{{route('medicine.update',  $medicine->med_id)}}">
+    <form method="POST" action="{{route('medicine.update', ['id' => $medicine->med_id])}}">
     {{ method_field('PUT') }}
     @csrf
         <div class="form-row">

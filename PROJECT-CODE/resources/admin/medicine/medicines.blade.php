@@ -32,12 +32,12 @@
                 <td>{{$medicine->created_at}}</td>
                 <td>{{$medicine->updated_at}}</td>
                 <td>
-                <form action="{{route('medicine.destroy',  $medicine->med_id)}}" method="DELETE">
+                <form action="{{route('medicine.destroy', ['id' => $medicine->med_id])}}" method="DELETE">
                 <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                 </form>
                 </td>
                 <td>
-                <form action="{{route('medicine.edit',  $medicine->med_id)}}" method="GET">
+                <form action="{{route('medicine.edit', ['id' => $medicine->med_id])}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>
