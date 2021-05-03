@@ -14,6 +14,7 @@ class AppointmentController extends Controller
     $data = DB::table('appointments')->insert(
         [ 
             'user_id' => \Auth::id(),
+            'app_id'=> $request->id,
             'doctor_id' =>  $request->doctor_id,
             'app_date' => NULL,
             'created_at' => date('Y-m-d H:i:s')
